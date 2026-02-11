@@ -631,29 +631,35 @@
         }
 
 
-        
+
         /* Modern Tech Buttons - Service Card Match */
         .btn-tech-primary {
             position: relative;
             display: inline-block;
-            background: rgba(2, 6, 23, 0.8); /* Darker base */
+            background: rgba(2, 6, 23, 0.8);
+            /* Darker base */
             color: #FFFFFF;
             overflow: hidden;
             transition: all 0.3s ease;
-            border-radius: 4px; /* Match service card radius usually */
-            border: 1px solid rgba(148, 163, 184, 0.1); /* Subtle base border */
+            border-radius: 4px;
+            /* Match service card radius usually */
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            /* Subtle base border */
         }
 
         /* The Animated Border (Pseudo Element like Service Card) */
-        .btn-tech-primary::before, .contact-card::before {
+        .btn-tech-primary::before,
+        .contact-card::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            border-radius: 4px; /* Match button radius */
-            padding: 2px; /* Border width */
+            border-radius: 4px;
+            /* Match button radius */
+            padding: 2px;
+            /* Border width */
             background: linear-gradient(90deg, #FFFFFF 0%, #60A5FA 50%, #3B82F6 100%);
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
@@ -668,14 +674,18 @@
            Actually ::before is inside. 
            With mask content-box, the center is transparent.
         */
-        
-        .btn-tech-primary:hover, .contact-card:hover {
-            transform: translateY(-5px); /* Lift */
-            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.2); /* Shadow */
+
+        .btn-tech-primary:hover,
+        .contact-card:hover {
+            transform: translateY(-5px);
+            /* Lift */
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.2);
+            /* Shadow */
             /* No Border Color change here, ::before handles it */
         }
 
-        .btn-tech-primary:hover::before, .contact-card:hover::before {
+        .btn-tech-primary:hover::before,
+        .contact-card:hover::before {
             opacity: 1;
             animation: borderDraw 1s ease-in-out forwards;
         }
@@ -688,10 +698,10 @@
             background: rgba(2, 6, 23, 0.4);
             border: 1px solid rgba(148, 163, 184, 0.1);
         }
-        
+
         /* Note: Social Icons might be <a> blocks. Need same ::before logic. */
         /* To avoid complex selector duplications, let's just apply to specific class if possible. */
-        
+
 
 
         .contact-card {
@@ -700,7 +710,7 @@
             /* Inherits display: block from Tailwind */
             /* Background handled by Tailwind */
         }
-</style>
+    </style>
 
     <!-- GSAP Animation Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -773,7 +783,7 @@
                     Artificial Intelligence into business logic.</p>
             </div>
 
-            
+
             <a href="#expertise"
                 class="hero-element btn-tech-primary inline-block px-10 py-4 text-sm font-bold tracking-widest uppercase mt-8"
                 style="border-radius: 4px; opacity: 1;">
@@ -788,10 +798,10 @@
     </section>
 
     <!-- ZONE 1.5: ABOUT ME -->
-    
 
 
-    
+
+
 
     <!-- ZONE 2: SOFTWARE PROFICIENCY -->
     <section class="py-24 px-6 md:px-16" style="background: transparent;">
@@ -979,7 +989,7 @@
                     style="background: #0F172A; border: 1px solid rgba(148, 163, 184, 0.1); border-radius: 2px;">
                     <div class="text-5xl font-black mb-4 gradient-accent">06</div>
 
-                <h3 class="text-xl font-bold tracking-tight mb-3">System Architecture</h3>
+                    <h3 class="text-xl font-bold tracking-tight mb-3">System Architecture</h3>
                     <p class="text-sm leading-relaxed mb-4" style="color: #94A3B8;">
                         End-to-end system design and technical consulting for complex, mission-critical applications.
                     </p>
@@ -991,40 +1001,52 @@
                     </ul>
                 </div>
             </div>
-        
+
 
             <!-- Custom Package (Landscape Standalone) -->
-            <div class="fade-in mt-12 p-8 md:p-12 relative overflow-hidden" 
-                 style="background: #0F172A; border: 1px solid rgba(148, 163, 184, 0.1); border-radius: 4px;">
-                 
-                 <!-- Decoration -->
-                 <div class="absolute top-0 right-0 p-6 opacity-5 pointer-events-none">
-                    <svg class="w-64 h-64" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 8.5l-2.5 1.25L12 11zm0 2.5l-5-2.5-5 2.5L12 22l10-8.5-5-2.5-5 2.5z"/></svg>
-                 </div>
+            <div class="fade-in mt-12 p-8 md:p-12 relative overflow-hidden"
+                style="background: #0F172A; border: 1px solid rgba(148, 163, 184, 0.1); border-radius: 4px;">
 
-                 <div class="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <!-- Decoration -->
+                <div class="absolute top-0 right-0 p-6 opacity-5 pointer-events-none">
+                    <svg class="w-64 h-64" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 8.5l-2.5 1.25L12 11zm0 2.5l-5-2.5-5 2.5L12 22l10-8.5-5-2.5-5 2.5z" />
+                    </svg>
+                </div>
+
+                <div class="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
                     <div class="md:col-span-2">
                         <div class="text-sm font-bold tracking-widest gradient-accent mb-2">TIER: ENTERPRISE</div>
-                        <h3 class="text-3xl md:text-4xl font-black tracking-tight mb-4 text-white">Custom Solutions Architecture</h3>
+                        <h3 class="text-3xl md:text-4xl font-black tracking-tight mb-4 text-white">Custom Solutions
+                            Architecture</h3>
                         <p class="text-lg leading-relaxed text-slate-400 mb-6">
-                            For challenges that defy standard categorization. I architect bespoke digital ecosystems tailored 
-                            precisely to your operational physics—from proprietary algorithms to high-frequency trading platforms.
+                            For challenges that defy standard categorization. I architect bespoke digital ecosystems
+                            tailored
+                            precisely to your operational physics—from proprietary algorithms to high-frequency trading
+                            platforms.
                         </p>
                         <div class="flex flex-wrap gap-3">
-                            <span class="px-3 py-1 text-xs font-bold tracking-widest text-blue-300 bg-blue-900/30 rounded border border-blue-800">CONSULTING</span>
-                            <span class="px-3 py-1 text-xs font-bold tracking-widest text-blue-300 bg-blue-900/30 rounded border border-blue-800">SYSTEM DESIGN</span>
-                            <span class="px-3 py-1 text-xs font-bold tracking-widest text-blue-300 bg-blue-900/30 rounded border border-blue-800">FULL-CYCLE DEV</span>
+                            <span
+                                class="px-3 py-1 text-xs font-bold tracking-widest text-blue-300 bg-blue-900/30 rounded border border-blue-800">CONSULTING</span>
+                            <span
+                                class="px-3 py-1 text-xs font-bold tracking-widest text-blue-300 bg-blue-900/30 rounded border border-blue-800">SYSTEM
+                                DESIGN</span>
+                            <span
+                                class="px-3 py-1 text-xs font-bold tracking-widest text-blue-300 bg-blue-900/30 rounded border border-blue-800">FULL-CYCLE
+                                DEV</span>
                         </div>
                     </div>
                     <div class="md:col-span-1 text-center md:text-right">
-                        <a href="#contact" class="btn-tech-primary inline-block px-8 py-4 text-sm font-bold tracking-widest uppercase">
+                        <a href="#contact"
+                            class="btn-tech-primary inline-block px-8 py-4 text-sm font-bold tracking-widest uppercase">
                             Discuss Feasibility
                         </a>
                     </div>
-                 </div>
+                </div>
             </div>
-            
-</div>
+
+        </div>
     </section>
 
     <!-- The Vault (Projects) Section -->
@@ -1144,36 +1166,40 @@
     <!-- ZONE 5: THE HANDSHAKE - Contact Section -->
 
     <!-- ZONE 5: THE HANDSHAKE - Contact Section (Redesigned) -->
-    
+
     <section id="vision" class="py-32 px-6 md:px-16 relative overflow-hidden" style="background: transparent;">
         <!-- Background pulse effect -->
         <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div class="w-[200px] h-[200px] md:w-[500px] md:h-[500px] bg-blue-600/20 rounded-full blur-[100px] animate-pulse"></div>
+            <div
+                class="w-[200px] h-[200px] md:w-[500px] md:h-[500px] bg-blue-600/20 rounded-full blur-[100px] animate-pulse">
+            </div>
         </div>
 
         <div class="max-w-5xl mx-auto text-center relative z-10">
             <div class="section-divider mb-20"></div>
 
-            <h2 class="text-5xl md:text-8xl font-black tracking-tighter mb-10 fade-in gradient-text" style="opacity: 0.9;">
+            <h2 class="text-5xl md:text-8xl font-black tracking-tighter mb-10 fade-in gradient-text"
+                style="opacity: 0.9;">
                 THE VISION
             </h2>
-            
+
             <div class="space-y-10 fade-in">
                 <p class="text-2xl md:text-5xl font-bold leading-tight text-white mb-8">
                     "The future isn't inherited.<br>It's <span class="gradient-accent">engineered</span>."
                 </p>
-                
+
                 <p class="text-lg md:text-2xl leading-relaxed text-slate-400 max-w-3xl mx-auto font-light">
-                    In a digital landscape cluttered with noise, I build clarity. 
-                    I don't just write code; I architect living systems that breathe, adapt, and scale. 
-                    My mission is to empower your business with pure, unadulterated intelligence that works silently in the background.
+                    In a digital landscape cluttered with noise, I build clarity.
+                    I don't just write code; I architect living systems that breathe, adapt, and scale.
+                    My mission is to empower your business with pure, unadulterated intelligence that works silently in
+                    the background.
                 </p>
 
                 <div class="pt-12 flex justify-center gap-6">
-                     <div class="flex items-center gap-2 text-blue-400">
+                    <div class="flex items-center gap-2 text-blue-400">
                         <span class="w-2 h-2 bg-blue-500 rounded-full animate-ping"></span>
                         <span class="text-xs font-bold tracking-widest uppercase">System Online</span>
-                     </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1257,7 +1283,7 @@
                     </a>
 
                     <!-- LinkedIn Card -->
-                    <a href="https://www.linkedin.com/in/meet-jani/" target="_blank"
+                    <a href="https://www.linkedin.com/in/dhruvam-upadhyay-2a1004323/" target="_blank"
                         class="contact-card group block p-6 rounded-lg bg-slate-900/40 border border-slate-800 transition-all">
                         <div class="flex items-center gap-4">
                             <div
