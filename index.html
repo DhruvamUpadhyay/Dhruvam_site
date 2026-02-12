@@ -712,7 +712,7 @@
             /* Inherits display: block from Tailwind */
             /* Background handled by Tailwind */
         }
-    
+
         /* Visual Gallery Styles */
 
         /* Monitor Frame Animation (Matches Service Card) */
@@ -728,8 +728,10 @@
             left: 0;
             right: 0;
             bottom: 0;
-            border-radius: 8px; /* Match monitor radius */
-            padding: 2px; /* Border width */
+            border-radius: 8px;
+            /* Match monitor radius */
+            padding: 2px;
+            /* Border width */
             background: linear-gradient(90deg, #FFFFFF 0%, #60A5FA 50%, #3B82F6 100%);
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
@@ -737,13 +739,15 @@
             mask-composite: exclude;
             opacity: 0;
             transition: opacity 0.3s ease;
-            z-index: 10; /* Above scanline? Scanline is z-10 inside. This is border. */
+            z-index: 10;
+            /* Above scanline? Scanline is z-10 inside. This is border. */
             pointer-events: none;
         }
 
         .monitor-frame:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 50px rgba(37, 99, 235, 0.2) !important; /* Override existing */
+            box-shadow: 0 20px 50px rgba(37, 99, 235, 0.2) !important;
+            /* Override existing */
         }
 
         .monitor-frame:hover::before {
@@ -757,7 +761,8 @@
             border-radius: 8px;
             box-shadow: 0 0 50px rgba(37, 99, 235, 0.15);
             overflow: hidden;
-            aspect-ratio: 16/9; /* Force cinematic aspect ratio */
+            aspect-ratio: 16/9;
+            /* Force cinematic aspect ratio */
             position: relative;
         }
 
@@ -765,9 +770,12 @@
             width: 100%;
             height: 100%;
             /* Hide scrollbar */
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
         }
+
         .film-strip::-webkit-scrollbar {
             display: none;
         }
@@ -776,13 +784,13 @@
             width: 100%;
             height: 100%;
             z-index: 10;
-            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.1));
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1));
             background-size: 100% 4px;
             position: absolute;
             pointer-events: none;
             opacity: 0.15;
         }
-</style>
+    </style>
 
     <!-- GSAP Animation Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -869,18 +877,20 @@
         </div>
     </section>
 
-    
+
     <!-- ZONE 1.5: ABOUT ME (Restored & Enhanced) -->
     <section id="about" class="py-24 px-6 md:px-16 relative">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            
+
             <!-- Left: Image -->
             <div class="fade-in profile-image-box relative w-full aspect-[3/4] md:aspect-[4/5] rounded-lg overflow-hidden border border-slate-800"
-                 style="box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
-                <img src="1755622160924.jpg" alt="Dhruvam Upadhyay" class="object-cover w-full h-full hover:scale-105 transition-transform duration-700">
-                
+                style="box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+                <img src="1755622160924.jpg" alt="Dhruvam Upadhyay"
+                    class="object-cover w-full h-full hover:scale-105 transition-transform duration-700">
+
                 <!-- Overlay Gradient for text readability if needed, but image looks clean -->
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60">
+                </div>
             </div>
 
             <!-- Right: Text -->
@@ -888,13 +898,19 @@
                 <h2 class="text-4xl md:text-6xl font-black tracking-tighter mb-8">
                     <span class="text-white">About</span><span class="text-blue-500">Me</span>
                 </h2>
-                
+
                 <div class="space-y-6 text-lg md:text-xl font-light leading-relaxed" style="color: #94A3B8;">
-                    <p>I am Dhruvam Upadhyay. Currently pursuing Bachelor of Computer Applications in Artificial Intelligence at Reva University, Bangalore.</p>
-                    <p class="text-white font-medium">I am a Full-Stack Architect and AI Engineer who values results over rhetoric.</p>
-                    <p>In an industry full of complexity and jargon, I bring clarity. I don't believe in 'trying' to fix a problem; I believe in architecting the solution that eliminates it. My approach is grounded in logic and executed with absolute precision.</p>
-                    <p>I specialize in building high-performance systems—from autonomous AI agents to enterprise-grade web applications. I don't write code to fill a timesheet; I write code to create leverage for your business.</p>
-                    <p class="font-medium text-blue-200" style="text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);">I am direct, I am technical, and I am obsessed with efficiency. If you want someone to simply 'follow instructions,' there are plenty of others. But if you want a partner who will engineer the outcome you actually need, then let's get to work.</p>
+                    <p>I am Dhruvam Upadhyay. Currently pursuing Bachelor of Computer Applications in Artificial
+                        Intelligence at Reva University, Bangalore.</p>
+                    <p class="text-white font-medium">I am a Full-Stack Architect and AI Engineer who values results
+                        over rhetoric.</p>
+                    <p>In an industry full of complexity and jargon, I bring clarity. I don't believe in 'trying' to fix
+                        a problem; I believe in architecting the solution that eliminates it. My approach is grounded in
+                        logic and executed with absolute precision.</p>
+                    <p>I specialize in building high-performance systems—from autonomous AI agents to enterprise-grade
+                        web applications. I don't write code to fill a timesheet; I write code to create leverage for
+                        your business.</p>
+
                 </div>
             </div>
         </div>
@@ -1269,11 +1285,11 @@
 
     <!-- ZONE 5: THE HANDSHAKE - Contact Section (Redesigned) -->
 
-    
+
 
     <!-- VISUAL INTERFACE GALLERY -->
     <section id="visual-gallery" class="py-24 px-6 md:px-12 relative overflow-hidden" style="background: transparent;">
-        
+
         <div class="max-w-7xl mx-auto mb-16 text-center">
             <h2 class="text-4xl md:text-6xl font-black tracking-tighter mb-4 gradient-text">VISUAL INTERFACE</h2>
             <p class="text-lg md:text-xl text-slate-400 font-light">Silent Showcase. No text. Just architecture.</p>
@@ -1281,7 +1297,7 @@
 
         <!-- PROJECT 1: DRAVION -->
         <div class="mb-24 fade-in">
-            
+
             <div class="mb-10 text-center">
                 <div class="flex items-center gap-4 mb-4">
                     <div class="h-[1px] bg-gradient-to-r from-transparent to-white/40 flex-grow"></div>
@@ -1289,98 +1305,113 @@
                     <div class="h-[1px] bg-gradient-to-l from-transparent to-white/40 flex-grow"></div>
                 </div>
                 <p class="text-base md:text-lg text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
-                    A reasoning-first <span class="text-white font-medium">Artificial Intelligence Operating System</span> designed for autonomous complex task execution.
+                    A reasoning-first <span class="text-white font-medium">Artificial Intelligence Operating
+                        System</span> designed for autonomous complex task execution.
                 </p>
             </div>
 
-            </div>
+        </div>
 
-            <!-- Monitor Frame -->
-            <div class="monitor-frame mx-auto max-w-6xl relative group">
-                <!-- Screen Glare/Scanline (Optional CSS) -->
-                <div class="scanline"></div>
-                
-                <!-- Scaling Container for Images -->
-                <div class="film-strip flex overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar" 
-                     id="gallery-dravion" style="scroll-behavior: smooth;">
-                    
-                    <!-- Images -->
-                    <div class="snap-center shrink-0 w-full h-full flex items-center justify-center bg-black">
-                        <img src="Dravion_images/dravion_1.png" class="max-w-full max-h-[80vh] object-contain" alt="Dravion Interface 1">
-                    </div>
-                    <div class="snap-center shrink-0 w-full h-full flex items-center justify-center bg-black">
-                        <img src="Dravion_images/dravion_2.png" class="max-w-full max-h-[80vh] object-contain" alt="Dravion Interface 2">
-                    </div>
-                    <div class="snap-center shrink-0 w-full h-full flex items-center justify-center bg-black">
-                        <img src="Dravion_images/dravion_3.png" class="max-w-full max-h-[80vh] object-contain" alt="Dravion Interface 3">
-                    </div>
-                    <div class="snap-center shrink-0 w-full h-full flex items-center justify-center bg-black">
-                        <img src="Dravion_images/dravion_4.png" class="max-w-full max-h-[80vh] object-contain" alt="Dravion Interface 4">
-                    </div>
+        <!-- Monitor Frame -->
+        <div class="monitor-frame mx-auto max-w-6xl relative group">
+            <!-- Screen Glare/Scanline (Optional CSS) -->
+            <div class="scanline"></div>
+
+            <!-- Scaling Container for Images -->
+            <div class="film-strip flex overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar"
+                id="gallery-dravion" style="scroll-behavior: smooth;">
+
+                <!-- Images -->
+                <div class="snap-center shrink-0 w-full h-full flex items-center justify-center bg-black">
+                    <img src="Dravion_images/dravion_1.png" class="max-w-full max-h-[80vh] object-contain"
+                        alt="Dravion Interface 1">
                 </div>
-
-                <!-- Overlay Info (Bottom Left) -->
-                <div class="absolute bottom-6 left-6 z-20 pointer-events-none">
-                    <div class="bg-black/80 backdrop-blur-md border border-white/10 px-4 py-2 rounded text-xs font-mono text-blue-300">
-                        SYSTEM.STATUS: ONLINE <span class="animate-pulse">●</span>
-                    </div>
+                <div class="snap-center shrink-0 w-full h-full flex items-center justify-center bg-black">
+                    <img src="Dravion_images/dravion_2.png" class="max-w-full max-h-[80vh] object-contain"
+                        alt="Dravion Interface 2">
+                </div>
+                <div class="snap-center shrink-0 w-full h-full flex items-center justify-center bg-black">
+                    <img src="Dravion_images/dravion_3.png" class="max-w-full max-h-[80vh] object-contain"
+                        alt="Dravion Interface 3">
+                </div>
+                <div class="snap-center shrink-0 w-full h-full flex items-center justify-center bg-black">
+                    <img src="Dravion_images/dravion_4.png" class="max-w-full max-h-[80vh] object-contain"
+                        alt="Dravion Interface 4">
                 </div>
             </div>
+
+            <!-- Overlay Info (Bottom Left) -->
+            <div class="absolute bottom-6 left-6 z-20 pointer-events-none">
+                <div
+                    class="bg-black/80 backdrop-blur-md border border-white/10 px-4 py-2 rounded text-xs font-mono text-blue-300">
+                    SYSTEM.STATUS: ONLINE <span class="animate-pulse">●</span>
+                </div>
+            </div>
+        </div>
         </div>
 
 
         <!-- PROJECT 2: TRENDBUZZERS -->
         <div class="mb-24 fade-in">
-            
+
             <div class="mb-10 text-center">
                 <div class="flex items-center gap-4 mb-4">
                     <div class="h-[1px] bg-gradient-to-r from-transparent to-purple-400/40 flex-grow"></div>
-                    <h3 class="text-3xl font-black tracking-widest uppercase text-white" style="text-shadow: 0 0 20px rgba(168, 85, 247, 0.4);">TRENDBUZZERS</h3>
+                    <h3 class="text-3xl font-black tracking-widest uppercase text-white"
+                        style="text-shadow: 0 0 20px rgba(168, 85, 247, 0.4);">TRENDBUZZERS</h3>
                     <div class="h-[1px] bg-gradient-to-l from-transparent to-purple-400/40 flex-grow"></div>
                 </div>
                 <p class="text-base md:text-lg text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
-                    A high-performance <span class="text-purple-300 font-medium">Enterprise E-Commerce Ecosystem</span> and administrative command center.
+                    A high-performance <span class="text-purple-300 font-medium">Enterprise E-Commerce Ecosystem</span>
+                    and administrative command center.
                 </p>
             </div>
 
-            </div>
+        </div>
 
-            <!-- Monitor Frame (Browser Style) -->
-            <div class="monitor-frame mx-auto max-w-6xl relative group" style="border-color: rgba(168, 85, 247, 0.3); box-shadow: 0 0 50px rgba(168, 85, 247, 0.1);">
-                <!-- Browser Header Mockup -->
-                <div class="absolute top-0 left-0 right-0 h-8 bg-slate-900/90 border-b border-white/5 flex items-center px-4 gap-2 z-20">
-                    <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
-                    <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
-                    <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
-                    <div class="ml-4 flex-grow bg-black/50 h-5 rounded text-[10px] text-slate-500 flex items-center px-2 font-mono">
-                        secure://admin.trendbuzzers.com
-                    </div>
-                </div>
-
-                <!-- Scaling Container for Images (Padding top for header) -->
-                <div class="film-strip flex overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar pt-8" 
-                     id="gallery-trend" style="scroll-behavior: smooth;">
-                    
-                    <!-- Images -->
-                    <div class="snap-center shrink-0 w-full h-full flex items-center justify-center bg-slate-950">
-                        <img src="Trendbuzzzers/trend_1.png" class="max-w-full max-h-[80vh] object-contain" alt="Trendbuzzers Interface 1">
-                    </div>
-                    <div class="snap-center shrink-0 w-full h-full flex items-center justify-center bg-slate-950">
-                        <img src="Trendbuzzzers/trend_2.png" class="max-w-full max-h-[80vh] object-contain" alt="Trendbuzzers Interface 2">
-                    </div>
-                    <div class="snap-center shrink-0 w-full h-full flex items-center justify-center bg-slate-950">
-                        <img src="Trendbuzzzers/trend_3.png" class="max-w-full max-h-[80vh] object-contain" alt="Trendbuzzers Interface 3">
-                    </div>
-                    <div class="snap-center shrink-0 w-full h-full flex items-center justify-center bg-slate-950">
-                        <img src="Trendbuzzzers/trend_4.png" class="max-w-full max-h-[80vh] object-contain" alt="Trendbuzzers Interface 4">
-                    </div>
+        <!-- Monitor Frame (Browser Style) -->
+        <div class="monitor-frame mx-auto max-w-6xl relative group"
+            style="border-color: rgba(168, 85, 247, 0.3); box-shadow: 0 0 50px rgba(168, 85, 247, 0.1);">
+            <!-- Browser Header Mockup -->
+            <div
+                class="absolute top-0 left-0 right-0 h-8 bg-slate-900/90 border-b border-white/5 flex items-center px-4 gap-2 z-20">
+                <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+                <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
+                <div
+                    class="ml-4 flex-grow bg-black/50 h-5 rounded text-[10px] text-slate-500 flex items-center px-2 font-mono">
+                    secure://admin.trendbuzzers.com
                 </div>
             </div>
+
+            <!-- Scaling Container for Images (Padding top for header) -->
+            <div class="film-strip flex overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar pt-8"
+                id="gallery-trend" style="scroll-behavior: smooth;">
+
+                <!-- Images -->
+                <div class="snap-center shrink-0 w-full h-full flex items-center justify-center bg-slate-950">
+                    <img src="Trendbuzzzers/trend_1.png" class="max-w-full max-h-[80vh] object-contain"
+                        alt="Trendbuzzers Interface 1">
+                </div>
+                <div class="snap-center shrink-0 w-full h-full flex items-center justify-center bg-slate-950">
+                    <img src="Trendbuzzzers/trend_2.png" class="max-w-full max-h-[80vh] object-contain"
+                        alt="Trendbuzzers Interface 2">
+                </div>
+                <div class="snap-center shrink-0 w-full h-full flex items-center justify-center bg-slate-950">
+                    <img src="Trendbuzzzers/trend_3.png" class="max-w-full max-h-[80vh] object-contain"
+                        alt="Trendbuzzers Interface 3">
+                </div>
+                <div class="snap-center shrink-0 w-full h-full flex items-center justify-center bg-slate-950">
+                    <img src="Trendbuzzzers/trend_4.png" class="max-w-full max-h-[80vh] object-contain"
+                        alt="Trendbuzzers Interface 4">
+                </div>
+            </div>
+        </div>
         </div>
 
     </section>
 
-<section id="vision" class="py-32 px-6 md:px-16 relative overflow-hidden" style="background: transparent;">
+    <section id="vision" class="py-32 px-6 md:px-16 relative overflow-hidden" style="background: transparent;">
         <!-- Background pulse effect -->
         <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
             <div
@@ -1735,7 +1766,7 @@
                         const maxScroll = gallery.scrollWidth - width;
 
                         let nextScroll = currentScroll + width;
-                        
+
                         // Loop back to start if at end
                         if (currentScroll >= maxScroll - 10) { // Tolerance
                             gallery.scrollTo({ left: 0, behavior: 'smooth' });
