@@ -714,6 +714,43 @@
         }
     
         /* Visual Gallery Styles */
+
+        /* Monitor Frame Animation (Matches Service Card) */
+        .monitor-frame {
+            position: relative;
+            /* Ensure other styles remain (background, border-radius etc are in previous CSS content) */
+        }
+
+        .monitor-frame::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 8px; /* Match monitor radius */
+            padding: 2px; /* Border width */
+            background: linear-gradient(90deg, #FFFFFF 0%, #60A5FA 50%, #3B82F6 100%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 10; /* Above scanline? Scanline is z-10 inside. This is border. */
+            pointer-events: none;
+        }
+
+        .monitor-frame:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(37, 99, 235, 0.2) !important; /* Override existing */
+        }
+
+        .monitor-frame:hover::before {
+            opacity: 1;
+            animation: borderDraw 1s ease-in-out forwards;
+        }
+
         .monitor-frame {
             background: #000;
             border: 1px solid rgba(59, 130, 246, 0.3);
@@ -1214,10 +1251,18 @@
 
         <!-- PROJECT 1: DRAVION -->
         <div class="mb-24 fade-in">
-            <div class="flex items-center gap-4 mb-6">
-                <div class="h-[1px] bg-blue-500/30 flex-grow"></div>
-                <h3 class="text-2xl font-bold tracking-widest uppercase text-blue-400">DRAVION OS</h3>
-                <div class="h-[1px] bg-blue-500/30 flex-grow"></div>
+            
+            <div class="mb-10 text-center">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="h-[1px] bg-gradient-to-r from-transparent to-white/40 flex-grow"></div>
+                    <h3 class="text-3xl font-black tracking-widest uppercase gradient-text">DRAVION OS</h3>
+                    <div class="h-[1px] bg-gradient-to-l from-transparent to-white/40 flex-grow"></div>
+                </div>
+                <p class="text-base md:text-lg text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
+                    A reasoning-first <span class="text-white font-medium">Artificial Intelligence Operating System</span> designed for autonomous complex task execution.
+                </p>
+            </div>
+
             </div>
 
             <!-- Monitor Frame -->
@@ -1256,10 +1301,18 @@
 
         <!-- PROJECT 2: TRENDBUZZERS -->
         <div class="mb-24 fade-in">
-            <div class="flex items-center gap-4 mb-6">
-                <div class="h-[1px] bg-purple-500/30 flex-grow"></div>
-                <h3 class="text-2xl font-bold tracking-widest uppercase text-purple-400">TRENDBUZZERS</h3>
-                <div class="h-[1px] bg-purple-500/30 flex-grow"></div>
+            
+            <div class="mb-10 text-center">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="h-[1px] bg-gradient-to-r from-transparent to-purple-400/40 flex-grow"></div>
+                    <h3 class="text-3xl font-black tracking-widest uppercase text-white" style="text-shadow: 0 0 20px rgba(168, 85, 247, 0.4);">TRENDBUZZERS</h3>
+                    <div class="h-[1px] bg-gradient-to-l from-transparent to-purple-400/40 flex-grow"></div>
+                </div>
+                <p class="text-base md:text-lg text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
+                    A high-performance <span class="text-purple-300 font-medium">Enterprise E-Commerce Ecosystem</span> and administrative command center.
+                </p>
+            </div>
+
             </div>
 
             <!-- Monitor Frame (Browser Style) -->
