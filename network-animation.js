@@ -30,8 +30,9 @@ window.addEventListener('load', function () {
     ];
 
     // Configuration
-    const particleCount = 100; // Even more for the explosion density
-    const dustCount = 60;
+    // Configuration
+    const particleCount = 200; // Increased for denser galaxy effect
+    const dustCount = 120;
     const particles = [];
     const dust = [];
     const nebulas = [];
