@@ -1589,13 +1589,11 @@
 
             // 4. The FLASH (Ball Expands)
             setTimeout(() => {
-                // Return to Blue for the flash start (remove gradient, use solid for perf)
+                // Prepare for flash: Keep the gradient structure but animate background-color
                 ball.style.willChange = 'transform, background-color';
-                ball.style.background = 'none'; // Clear gradient
-                ball.style.backgroundColor = '#0ea5e9'; // Explicit Blue
-                ball.style.boxShadow = '0 0 50px #0ea5e9'; // Blue Glow
+                // Note: We keep the gradient defined in HTML/CSS, just animating the base color
 
-                // Ball expands
+                // Ball expands and turns white
                 ball.style.animation = 'ballFlash 0.8s cubic-bezier(0.7, 0, 1, 1) forwards';
             }, 2600);
 
@@ -1615,13 +1613,10 @@
 
                 // Fade out Overlay
                 overlay.style.transition = 'opacity 1s ease-out';
-                overlay.style.opacity = '0';
+                setTimeout(() => {
+                    overlay.style.display = 'none';
+                }, 1000);
             }, 3000);
-
-            // 6. Cleanup
-            setTimeout(() => {
-                overlay.style.display = 'none';
-            }, 4500);
         });
     </script>
 
