@@ -362,7 +362,11 @@ window.addEventListener('load', function () {
         }
 
         particles.sort((a, b) => a.z - b.z);
-        particles.forEach(p => { p.update(); p.draw(); });
+        particles.forEach(p => {
+            p.update();
+            // Only draw particles if NOT gathering (hides the "circle" glitch)
+            if (introState !== 'gathering') p.draw();
+        });
 
         // Connections (Only after intro)
         if (introState === 'done' || (introState === 'exploding' && explosionTime > 50)) {
