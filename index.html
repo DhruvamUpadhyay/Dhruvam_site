@@ -811,35 +811,32 @@
     <div id="intro-overlay"
         style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; z-index: 9999; display: flex; align-items: center; justify-content: center;">
         <div id="intro-container"
-            style="display: flex; align-items: baseline; gap: 40px; opacity: 0; transition: opacity 0.5s ease;">
+            class="flex flex-col md:flex-row items-center md:items-baseline justify-center gap-6 md:gap-10 opacity-0 transition-opacity duration-500 ease-out"
+            style="opacity: 0;">
             <!-- Left Text: White -->
             <div id="intro-welcome"
-                style="font-size: clamp(3rem, 5vw, 6rem); font-weight: 900; color: #fff; letter-spacing: -0.05em; line-height: 1; padding-right: 0.2em;">
+                class="text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tighter leading-none">
                 Welcome</div>
 
             <!-- Ball Container (The Dot) -->
-            <!-- Sits on baseline. 45px ball. -->
+            <!-- Sits on baseline on desktop, center on mobile. -->
             <div id="ball-container"
-                style="position: relative; width: 45px; height: 45px; display: flex; align-items: flex-end; transform: translateY(10px);">
+                class="relative w-12 h-12 md:w-[45px] md:h-[45px] flex items-end justify-center md:translate-y-[10px]">
                 <div id="intro-ball" style="
-                    width: 45px; height: 45px; 
-                    background: radial-gradient(circle at 35% 35%, #7DD3FC, #0ea5e9, #0369a1); /* 3D Sphere Look */
+                    width: 100%; height: 100%; 
+                    background-color: #0ea5e9; /* Start Blue */
                     border-radius: 50%; 
-                    /* No Box Shadow (Glow) as requested */
                     transform: translateY(-100vh); /* Start off-screen */
                     opacity: 0;
                 "></div>
             </div>
 
             <!-- Right Text: Gradient Blue (Matched to .gradient-text) -->
-            <div id="intro-build" style="
-                font-size: clamp(3rem, 5vw, 6rem); 
-                font-weight: 900; 
+            <div id="intro-build" class="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none"
+                style="
                 background: linear-gradient(90deg, #FFFFFF 0%, #60A5FA 50%, #3B82F6 100%);
                 -webkit-background-clip: text; 
                 -webkit-text-fill-color: transparent; 
-                letter-spacing: -0.05em;
-                line-height: 1;
                 opacity: 0;
             ">Let's Build</div>
         </div>
