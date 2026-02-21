@@ -802,14 +802,14 @@
     <script src="network-animation.js?v=33"></script>
 </head>
 
-<body class="antialiased font-sans bg-black text-white">
+<body class="antialiased font-sans bg-black text-white" style="overflow: hidden;">
     <!-- 3D Network Background (Global Fixed) -->
     <canvas id="network-canvas"
         style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none;"></canvas>
 
     <!-- Final Intro: Welcome [Ball] Let's Build -->
     <div id="intro-overlay"
-        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: transparent; z-index: 9999; display: flex; align-items: center; justify-content: center;">
+        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; z-index: 9999; display: flex; align-items: center; justify-content: center;">
         <div id="intro-container"
             class="flex flex-col md:flex-row items-center md:items-baseline justify-center gap-6 md:gap-10 opacity-0 transition-opacity duration-500 ease-out"
             style="opacity: 0;">
@@ -1597,13 +1597,12 @@
                 ball.style.animation = 'ballFlash 0.8s cubic-bezier(0.7, 0, 1, 1) forwards';
             }, 2600);
 
-            // 5. Reveal Site & Trigger Explosion (Delayed to avoid lag during flash)
-            // 5. Reveal Site & Trigger Explosion (Smoother Vanish)
+            // 5. Reveal Site & Trigger Explosion
             setTimeout(() => {
-                // CRITICAL: Trigger the background network explosion here (delayed slightly less)
+                // Trigger the background network explosion
                 if (window.triggerExplosion) window.triggerExplosion();
 
-                // Reveal Hero Elements behind the white screen
+                // Reveal Hero Elements
                 heroElements.forEach((el, index) => {
                     setTimeout(() => {
                         el.style.transition = 'all 0.8s ease-out';
@@ -1612,12 +1611,13 @@
                     }, index * 100);
                 });
 
-                // Fade out Overlay QUICKLY (0.5s) to vanish smoothly
+                // Fade out & fully remove the overlay — re-enable scrolling
                 overlay.style.transition = 'opacity 0.6s ease-out';
                 overlay.style.opacity = '0';
                 setTimeout(() => {
                     overlay.style.display = 'none';
-                }, 600);
+                    document.body.style.overflow = 'auto'; // Re-enable scroll
+                }, 650);
             }, 2900);
         });
     </script>
